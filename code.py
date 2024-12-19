@@ -20,3 +20,18 @@ print(data.describe())
 # Example of checking unique values in a column
 print("\nUnique Product Categories:")
 print(data['Product Category'].unique())
+
+# Check for missing values
+print(data.isnull().sum())
+
+# Check for duplicate rows
+print(data.duplicated().sum())
+
+# View unique values in categorical columns
+print(data['Product Category'].unique())
+
+# Basic statistical summary
+print(data.describe())
+
+data = data.dropna()  # Removes rows with missing values
+data = data.drop_duplicates()
